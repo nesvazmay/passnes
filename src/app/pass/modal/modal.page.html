@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title (click)="dismiss()">Desliza para cerrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<!--  /////////////////////////////////  INFO DE CONTRASEÑA  ////////////////////////////////////////////////////  -->
+
+  <ion-card *ngFor="let item of info" mode="ios">
+    <ion-card-header align="center">
+      <ion-card-subtitle>Cuenta</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <h1>Sitio: {{item.sitio}}</h1>
+      <ion-label>Contraseña: {{item.pass2}}</ion-label>
+      <div class="centrado">
+        <ion-buttons slot="end">
+          <ion-button (click)="seguro(item)" color="danger">
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="modificar(item)" color="warning">
+            <ion-icon name="create-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons> 
+      </div> 
+    </ion-card-content>
+  </ion-card>
+
+<!--  /////////////////////////////////  SELECCION DE LOGO  ////////////////////////////////////////////////////  -->
+
+  <div class="centrado">
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" multiple="false" placeholder="Logo" 
+        [(ngModel)]="select" (ionChange)="editarLogo()">
+
+      <ion-select-option value="logo-amazon">Amazon</ion-select-option>
+      <ion-select-option value="logo-apple">Apple</ion-select-option>
+      <ion-select-option value="logo-dropbox">Dropbox</ion-select-option>
+      <ion-select-option value="logo-facebook">Facebook</ion-select-option>
+      <ion-select-option value="logo-github">GitHub</ion-select-option>
+      <ion-select-option value="logo-google">Google</ion-select-option>
+      <ion-select-option value="logo-instagram">Instagram</ion-select-option>
+      <ion-select-option value="logo-linkedin">Linkedin</ion-select-option>
+      <ion-select-option value="logo-paypal">Paypal</ion-select-option>
+      <ion-select-option value="logo-playstation">Playstation</ion-select-option>
+      <ion-select-option value="logo-skype">Skype</ion-select-option>
+      <ion-select-option value="logo-tiktok">TikTok</ion-select-option>
+      <ion-select-option value="logo-twitch">Twitch</ion-select-option>
+      <ion-select-option value="logo-twitter">Twitter</ion-select-option>
+      <ion-select-option value="logo-whatsapp">WhatsApp</ion-select-option>
+      <ion-select-option value="logo-xbox">Xbox</ion-select-option>
+      <ion-select-option value="logo-youtube">YouTube</ion-select-option>
+    </ion-select>
+  </div>
+
+<!--  /////////////////////////////////  LOGO  ////////////////////////////////////////////////////  -->
+
+  <div *ngFor="let item of info" class="centrado">
+    <ion-icon align="center" name="{{item.icos}}" style="font-size: 250px" color="medium"></ion-icon>
+  </div>
+  
+</ion-content>

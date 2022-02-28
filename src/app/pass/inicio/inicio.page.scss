@@ -1,0 +1,45 @@
+ion-content {
+  --padding-top: 18%;
+  --padding-start: 15%;
+  --padding-end: 15%;
+  //--background: url('https://static.wixstatic.com/media/bf350f_1a455d7ecfce44bbaf680b0d9fbae66d~mv2_d_17784_11817_s_6_4_3.jpg/v1/fill/w_640,h_1246,al_c,q_85,usm_0.66_1.00_0.01/bf350f_1a455d7ecfce44bbaf680b0d9fbae66d~mv2_d_17784_11817_s_6_4_3.webp') 0 0/100% 100% no-repeat;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.input-group {
+  background: var(--ion-color-light);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-width: 0.06cm;
+  border-style: var(--border-style);
+  border-color: var(--ion-color-light);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.input {
+  text-align: center;
+  background: var(--ion-color-dark);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-width: 0.06cm;
+  width: 2cm;
+  border-style: var(--border-style);
+  border-color: var(--ion-color-medium);
+  border-radius: 20px;
+  text-align: center;
+  display:block;
+  margin:auto;
+  color: var(--ion-color-light);
+}
+
+.label {
+  font-size: 1.4rem;
+  font-family: monospace;
+  color: var(--ion-color-dark);
+}

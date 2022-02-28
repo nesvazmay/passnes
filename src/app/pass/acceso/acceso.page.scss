@@ -1,0 +1,83 @@
+.divPass {
+    background: var(--ion-color-chips);
+    overflow: hidden;
+    width: 250px;
+    border-width: 0.06cm;
+    border-style: var(--border-style);
+    border-color: var(--ion-color-medium);
+    border-radius: 37px;
+    text-align: center;
+    display:block;
+    margin:auto;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.pruebaB {
+    border-width: 0.06cm;
+  border-style: var(--border-style);
+  border-color: var(--ion-color-medium);
+}
+
+.tituloContra{
+    font-size: 1.3rem;
+    margin-top: 12px;
+    text-align: center;
+    display:block;
+    margin:auto;
+    font-weight: bold;
+}
+
+.navButtons{
+    margin-top: 14px;
+}
+
+.navBar{  
+    margin-top: -5px;
+    height: 2cm;
+}
+
+#font {
+    font-family: monospace;
+}
+
+.centrado {
+    text-align: center;
+}
+
+ion-content {
+    --padding-top: 5%;
+    --padding-start: 5%;
+    --padding-end: 5%;
+}
+
+.logoMenu { 
+    filter: drop-shadow(0px 0px 15px var(--ion-color-dark));
+    display:block;
+    margin:auto;
+    width: 130px; 
+    height: 130px;  
+}
+
+.modal {
+    height: 100%;
+    --padding-start: 5%;
+    --padding-end: 5%;
+}
+
+.title{
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+
+.toolbar {
+    //border-radius:10px 5px 50px 5px;
+    border-bottom-left-radius: 11em 7em;
+    border-bottom-right-radius: 11em 7em;
+
+    --background: var(--ion-color-chips);
+}
+

@@ -1,0 +1,49 @@
+<ion-content>
+  <ion-slides pager="true">
+
+    <ion-slide>
+      <ion-text>
+        <h1 class="titulo">¡Gracias por descargar Passnes!</h1>
+        <img src="/assets/images/logo.png" class="elemento"><br><br><br>
+        <ion-button (click)="next()" fill="outline" color="light" class="button" shape="round">Siguiente</ion-button>
+      </ion-text>
+    </ion-slide>
+
+    <ion-slide class="slide2">
+      <ion-text>
+        <h1 class="titulo">Aquí podrás gestionar <br> tus contraseñas</h1>
+        <br><br>
+
+        <ion-icon name="eye-off-outline" color="light" style="font-size: 210px"></ion-icon><br><br><br>
+
+        <ion-button (click)="next()" fill="outline" color="light" shape="round">Siguiente</ion-button>
+      </ion-text>
+    </ion-slide>
+ 
+    <ion-slide>
+      <ion-text>
+        <ion-icon name="person-add-outline" color="light" style="font-size: 180px"></ion-icon><br><br>
+
+          <ion-label class="titulo">Genera tu PIN de acceso</ion-label>
+          <br><br>
+          <ion-label color="light" class="sub">Recuerda que debe ser <br> de  4 digitos y de preferencia números</ion-label>
+          <br><br>
+        
+            <form #formulario="ngForm" (ngSubmit)="guardarPass(pass)">
+              <ion-item class="itemInput">
+                <ion-input
+                type="text"
+                name="pass1"
+                color="dark" 
+                [(ngModel)]="pass"
+                class="centrarInput"
+                ></ion-input>
+              </ion-item>
+              
+        <ion-button type="submit" fill="outline" color="light" shape="round">Generar</ion-button>
+      </form>
+      </ion-text>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

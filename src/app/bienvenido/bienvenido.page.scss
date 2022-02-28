@@ -1,0 +1,28 @@
+ion-content {
+    --background: rgb(0, 0, 0);
+    --padding-start: 12%;
+    --padding-end: 12%;
+}
+
+ion-slides {
+    height: 100%;
+    --bullet-background-active: rgb(251, 255, 0);
+    --bullet-background: rgb(255, 255, 255);
+}
+
+.titulo {
+    font-size: 1.7rem;
+    font-family: monospace;
+    color: var(--ion-color-light) !important;
+}
+
+.sub {
+    font-size: 0.8em;
+    font-family: monospace;
+    color: var(--ion-color-light) !important;
+}
+
+.elemento1 { 
+    width: 140px; 
+    height: 140px; 
+}

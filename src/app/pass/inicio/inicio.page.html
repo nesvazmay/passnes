@@ -1,0 +1,17 @@
+<ion-content mode="ios">
+  <form #formulario="ngForm" (ngSubmit)="entrar(pass)">
+          <ion-list>
+            <ion-item lines="none"> 
+              <ion-label align="center" class="label">PIN:</ion-label><br><br>
+              <ion-input class="input" autocomplete="off" autocorrect="off"
+              type="password"
+              name="pass1"
+              [(ngModel)]="pass"
+              ></ion-input>
+            </ion-item>
+          </ion-list><br>
+    <ion-button type="submit" mode="md" color="dark" expand="block" shape="round" fill="outline">Entrar</ion-button>
+  </form>
+</ion-content>
+  
+

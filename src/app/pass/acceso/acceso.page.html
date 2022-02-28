@@ -1,0 +1,79 @@
+
+<!-- /////////////////////////////////  MENU  //////////////////////////////////////////////////// -->
+
+<ion-menu side="end" menuId="first" content-id="main">
+  <ion-toolbar class="modal"><br><br><br>
+    <img src="/assets/images/i.png" class="logoMenu">
+    <br><br><br>
+    <ion-list>
+      <ion-item lines="full"> 
+        <ion-icon name="moon" slot="start"></ion-icon>
+        <ion-label align="center" id="font">Modo oscuro</ion-label>
+        <ion-toggle slot="end"
+                    color="warning"
+                    [ngModel]="darkmode"
+                    (ionChange)="activar()"
+        ></ion-toggle>
+      </ion-item>
+    </ion-list>
+    <br>
+    <div class="centrado">
+      <ion-button fill="outline" shape="round" color="danger" routerLink="/inicio">Salir</ion-button>
+    </div>
+  </ion-toolbar>
+</ion-menu>
+
+<!-- /////////////////////////////////  ENCABEZADO  //////////////////////////////////////////////////// -->
+
+<ion-toolbar class="toolbar">
+    
+    <ion-item lines="none" color="chips">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/inicio" color="warning"></ion-back-button>
+          <!--
+            <ion-button>
+            <ion-icon name="arrow-back"></ion-icon>
+            </ion-button>
+          -->
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-menu-button color="warning" auto-hide="true" id="main"></ion-menu-button>
+      </ion-buttons>
+    </ion-item>
+  <div class="title">
+      <ion-item lines="none" color="chips">
+        <ion-card-subtitle class="tituloContra" color="dark">CONTRASEÑAS</ion-card-subtitle>
+      </ion-item>
+  </div><br> 
+</ion-toolbar>
+
+<!-- /////////////////////////////////  CONTENIDO  //////////////////////////////////////////////////// -->
+
+<ion-content padding>
+
+  <!-- /////////////////////////////////  REFRESHER  //////////////////////////////////////////////////// -->
+
+<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.4" pullMin="40" pullMax="500">
+  <ion-refresher-content 
+  pullingIcon="chevron-down-circle-outline"
+  pullingText="Desliza para actualizar"
+  refreshingSpinner="crescent" color="medium"></ion-refresher-content>
+</ion-refresher>
+
+<!-- /////////////////////////////////  CHIPS (CONTRASEÑAS)  //////////////////////////////////////////////////// -->
+  <div class="divPass">
+    <!--<ion-chip *ngFor="let item of info" (click)="modal(item)" outline="true" color="warning">-->
+    <ion-chip *ngFor="let item of info" (click)="modal(item)">
+      <ion-icon [name]="item.icos" color="dark"></ion-icon>
+      <ion-label class="dark" id="font">{{ item.sitio }}</ion-label>
+    </ion-chip>
+  </div>
+
+  <!-- /////////////////////////////////  BOTON FLOTANTE  //////////////////////////////////////////////////// -->
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="agregar(item)">
+  <ion-fab-button color="dark">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-content>
